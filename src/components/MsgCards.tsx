@@ -6,10 +6,43 @@ import {
   IconButton,
   Image,
   Text,
+  useToast,
 } from "@chakra-ui/react";
+import {
+  EventHandler,
+  KeyboardEvent,
+  KeyboardEventHandler,
+  useRef,
+  useState,
+} from "react";
 import { AiOutlineSend } from "react-icons/ai";
 
 export const MsgCards = () => {
+  const [messageValue, setMessageValue] = useState("");
+  const sendButtonRef = useRef(null);
+  const toast = useToast();
+  function handleSendClick() {
+    toast({
+      title: "Message Sent!",
+      status: "success",
+      duration: 1500,
+      isClosable: true,
+    });
+  }
+  function handleKeyDown(e: KeyboardEvent<HTMLInputElement>) {
+    if (e.key === "Enter") {
+      console.log("pressed enter");
+      sendButtonRef.current.click();
+      if (document.activeElement instanceof HTMLElement) {
+        document.activeElement.blur();
+      }
+      setMessageValue("");
+    }
+  }
+
+  function handleMessageValueChange(e: string) {
+    setMessageValue(e);
+  }
   return (
     <Center
       flexDir="column"
@@ -39,6 +72,8 @@ export const MsgCards = () => {
       </Flex>
       <Flex w="100%">
         <Input
+          value={messageValue}
+          onChange={(e) => handleMessageValueChange(e.target.value)}
           bg="bg2"
           color="text3"
           p="10px"
@@ -47,14 +82,17 @@ export const MsgCards = () => {
           w="100%"
           textAlign="center"
           placeholder="message"
+          onKeyDown={(e) => handleKeyDown(e)}
         />
         <IconButton
+          ref={sendButtonRef}
           ml="5px"
           mt="10px"
           aria-label="send"
           color="blue.100"
           bg="blue.400"
           icon={<AiOutlineSend />}
+          onClick={() => handleSendClick()}
           _hover={{ color: "white" }}
         />
       </Flex>

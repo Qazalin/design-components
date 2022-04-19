@@ -6,7 +6,9 @@ import {
   Checkbox,
   IconButton,
   Flex,
+  Tooltip,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import { BiRightArrow } from "react-icons/bi";
 export const OptionsMenu = () => {
   const options = ["spain", "UK", "Japan", "italy", "Brazil"];
@@ -21,22 +23,31 @@ export const OptionsMenu = () => {
       textTransform="capitalize"
     >
       <Flex w="100%">
-        <Box
-          bg="gray.700"
-          color="gray.400"
-          p="10px"
-          mt="10px"
-          borderRadius="5px"
-          w="100%"
-          textAlign="center"
+        <Tooltip
+          textTransform="capitalize"
+          hasArrow
+          label="select desired contries"
         >
-          Select
-        </Box>
+          <Box
+            bg="gray.700"
+            color="gray.400"
+            p="10px"
+            mt="10px"
+            borderRadius="5px"
+            w="100%"
+            textAlign="center"
+          >
+            Select
+          </Box>
+        </Tooltip>
         <IconButton
           ml="5px"
           mt="12px"
           aria-label="send"
+          bg="primary"
+          color="blue.200"
           icon={<BiRightArrow />}
+          _hover={{ color: "white" }}
         />
       </Flex>
       <Stack mt="30px" spacing={5}>
@@ -47,7 +58,14 @@ export const OptionsMenu = () => {
         ))}
       </Stack>
       <Center w="100%">
-        <Button mt="30px" w="100%" size="lg" bg="blue.600">
+        <Button
+          as={motion.button}
+          whileHover={{ scale: 1.03 }}
+          mt="30px"
+          w="100%"
+          size="lg"
+          bg="primary"
+        >
           Lets go!
         </Button>
       </Center>
