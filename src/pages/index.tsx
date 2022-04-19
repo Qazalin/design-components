@@ -1,14 +1,12 @@
-import { Image } from "@chakra-ui/react";
-
-import { Container } from "../components/Container";
+import { Box } from "@chakra-ui/react";
 import { MsgCards } from "../components/MsgCards";
 import { OptionsMenu } from "../components/OptionsMenu";
 
 const Index = () => (
-  <Container height="100vh">
+  <Box>
     <MsgCards />
     <OptionsMenu />
-  </Container>
+  </Box>
 );
 
 export default Index;

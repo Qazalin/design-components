@@ -79,6 +79,10 @@ export const ThemeColors = {
         default: "gray.50",
         _dark: "gray.700",
       },
+      bg3: {
+        default: "gray.200",
+        _dark: "gray.300",
+      },
       text1: {
         default: "black",
         _dark: "white",
@@ -86,6 +90,10 @@ export const ThemeColors = {
       text2: {
         default: "gray.500",
         _dark: "gray.200",
+      },
+      text3: {
+        default: "gray.300",
+        _dark: "gray.400",
       },
       primary: {
         default: "blue.300",

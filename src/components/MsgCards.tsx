@@ -1,11 +1,19 @@
-import { Box, Center, Flex, IconButton, Image, Text } from "@chakra-ui/react";
+import {
+  Box,
+  Input,
+  Center,
+  Flex,
+  IconButton,
+  Image,
+  Text,
+} from "@chakra-ui/react";
 import { AiOutlineSend } from "react-icons/ai";
 
 export const MsgCards = () => {
   return (
     <Center
       flexDir="column"
-      bg="gray.900"
+      bg="bg1"
       w="300px"
       h="400px"
       p="10px"
@@ -30,23 +38,24 @@ export const MsgCards = () => {
         </Text>
       </Flex>
       <Flex w="100%">
-        <Box
-          bg="gray.700"
-          color="gray.400"
+        <Input
+          bg="bg2"
+          color="text3"
           p="10px"
           mt="10px"
           borderRadius="5px"
           w="100%"
           textAlign="center"
-        >
-          message
-        </Box>
+          placeholder="message"
+        />
         <IconButton
           ml="5px"
           mt="10px"
           aria-label="send"
+          color="blue.100"
+          bg="blue.400"
           icon={<AiOutlineSend />}
-          colorScheme="blue"
+          _hover={{ color: "white" }}
         />
       </Flex>
     </Center>
