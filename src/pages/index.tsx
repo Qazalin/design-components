@@ -5,7 +5,7 @@ import { MsgCards } from "../components/MsgCards";
 import { OptionsMenu } from "../components/OptionsMenu";
 
 const Index = () => (
-  <Container height="100vh" bg="gray.700">
+  <Container height="100vh">
     <MsgCards />
     <OptionsMenu />
   </Container>
