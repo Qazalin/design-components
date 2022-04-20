@@ -16,6 +16,7 @@ import React, {
     useState,
 } from "react"
 import { AiOutlineSend } from "react-icons/ai"
+import { Person1 } from "./placeHolders"
 import { MsgCardProps } from "./types"
 
 export const MsgCards: React.FC<MsgCardProps> = (props) => {
@@ -102,7 +103,8 @@ export const MsgCards: React.FC<MsgCardProps> = (props) => {
 }
 
 MsgCards.defaultProps = {
-    userImage: "people/1.png",
+    userImage: Person1.avatarUrl,
+    userId: Person1.userId,
     userName: "Lida Mira",
     userCompany: "Flooz",
     userTitle: "Product Manager",
