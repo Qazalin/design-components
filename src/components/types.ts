@@ -4,3 +4,6 @@ export type MsgCardProps = {
     userTitle: string
     userCompany: string
 }
+export type OptionsMenuProps = {
+    options: string[]
+}

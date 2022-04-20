@@ -9,9 +9,10 @@ import {
   Tooltip,
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
+import React from "react";
 import { BiRightArrow } from "react-icons/bi";
-export const OptionsMenu = () => {
-  const options = ["spain", "UK", "Japan", "italy", "Brazil"];
+import {OptionsMenuProps} from "./types";
+export const OptionsMenu: React.FC<OptionsMenuProps> = ({options}) => {
   return (
     <Box
       bg="gray.900"
@@ -63,3 +64,7 @@ export const OptionsMenu = () => {
     </Box>
   );
 };
+
+OptionsMenu.defaultProps = {
+  options: ["spain", "UK", "Japan", "italy", "Brazil"];
+}
