@@ -1,7 +1,7 @@
 import { AspectRatio, Box, Text } from "@chakra-ui/layout"
 export const VideoCard = () => {
     return (
-        <Box>
+        <Box bg="bg1" w="300px" h="400px" p="10px" px="20px">
             <AspectRatio>
                 <iframe title="video" src="" />
             </AspectRatio>

@@ -751,6 +751,16 @@
   resolved "https://registry.npmjs.org/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
+"@fontsource/lato@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/lato/-/lato-4.5.5.tgz#d7371e29600528a44f5076a1604cf223168d1579"
+  integrity sha512-0KVmVCq3wZnriKVdbY+n/ZLf7Vy+dQcqpcm8kaVX4QGd6uBTgH6YWLnM1L051TtjKlal2FiE6xc/BLw116a0gQ==
+
+"@fontsource/raleway@^4.5.5":
+  version "4.5.5"
+  resolved "https://registry.yarnpkg.com/@fontsource/raleway/-/raleway-4.5.5.tgz#0540aeb025190bdc9bf59669fcffbc95d3b7dc8b"
+  integrity sha512-T2zIJ/6/2x+T9+tLtw/qSiJ68ahcceDMUOU3zrzEyNGYXUvlQyU4Cv9wyTmS+TU9IFHHChjMToV6izRL9mqDqg==
+
 "@next/env@12.1.5":
   version "12.1.5"
   resolved "https://registry.npmjs.org/@next/env/-/env-12.1.5.tgz"
