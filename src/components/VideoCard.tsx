@@ -1,13 +1,14 @@
-import { AspectRatio, Box } from "@chakra-ui/layout";
+import { AspectRatio, Box, Text } from "@chakra-ui/layout"
 export const VideoCard = () => {
-  return (
-    <Box>
-      <AspectRatio>
-        <iframe title="video" src="" />
-      </AspectRatio>
-    </Box>
-  );
-};
+    return (
+        <Box>
+            <AspectRatio>
+                <iframe title="video" src="" />
+            </AspectRatio>
+            <Text>Title</Text>
+        </Box>
+    )
+}
 
 /* <IconButton
           ml="5px"

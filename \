@@ -1,14 +1,14 @@
-import { Box, HStack } from "@chakra-ui/react"
+import { Box } from "@chakra-ui/react"
 import { MsgCards } from "../components/MsgCards"
 import { OptionsMenu } from "../components/OptionsMenu"
 import { VideoCard } from "../components/VideoCard"
 
 const Index = () => (
-    <HStack>
+    <Box>
         <MsgCards />
         <OptionsMenu />
         <VideoCard />
-    </HStack>
+    </Box>
 )
 
 export default Index
