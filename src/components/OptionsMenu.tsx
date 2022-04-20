@@ -40,15 +40,6 @@ export const OptionsMenu = () => {
             Select
           </Box>
         </Tooltip>
-        <IconButton
-          ml="5px"
-          mt="12px"
-          aria-label="send"
-          bg="primary"
-          color="blue.200"
-          icon={<BiRightArrow />}
-          _hover={{ color: "white" }}
-        />
       </Flex>
       <Stack mt="30px" spacing={5}>
         {options.map((o, i) => (
