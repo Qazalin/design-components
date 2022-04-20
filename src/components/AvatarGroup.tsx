@@ -9,9 +9,8 @@ export const AvatarGroup: React.FC<AvatarGroupProps> = ({ users }) => {
         <Box
             display="inline-flex"
             flexDir="row-reverse"
-            w="400px"
-            h="400px"
-            bg="bg1"
+            w="100%"
+            h="100%"
             borderRadius="24px"
         >
             {users.map((u, i) => (
