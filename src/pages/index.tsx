@@ -1,12 +1,26 @@
 import { Box, HStack } from "@chakra-ui/react"
-import { MsgCards, OptionsMenu, VideoCard } from "../components"
+import { MsgCards, OptionsMenu, VideoCard, EmojiCard } from "../components"
+import fs from "fs"
 
-const Index = () => (
-    <HStack>
-        <MsgCards />
+const Index = ({ emojies }) => {
+    console.log(emojies)
+    return (
+        <HStack>
+            {/* <MsgCards />
         <OptionsMenu />
-        <VideoCard />
-    </HStack>
-)
+        <VideoCard /> */}
+            <EmojiCard emojiArr={emojies} />
+        </HStack>
+    )
+}
 
 export default Index
+
+export function getStaticProps() {
+    const Emojies = fs.readdirSync("./public/emoji")
+    return {
+        props: {
+            emojies: Emojies,
+        },
+    }
+}
